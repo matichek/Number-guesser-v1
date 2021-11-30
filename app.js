@@ -3,7 +3,7 @@
 // values
 let min = 1,
     max = 1000,
-    winningNum = 2,
+    winningNum = getRandomNum(min,max),
     guessesLeft = 3;
 
 // ui
@@ -104,12 +104,6 @@ function setMessage(msg, color) {
   message.style.color = color;
 }
 
-function getRandomNum() {
-
-  winningNum = Math.floor(Math.random() * 1000);
-
-  console.log(winningNum);
-  return winningNum
+function getRandomNum(min, max) {
+  return Math.floor(Math.random()*(max-min)+min)
 }
-
-getRandomNum();
